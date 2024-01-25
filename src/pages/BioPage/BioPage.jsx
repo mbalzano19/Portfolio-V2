@@ -42,18 +42,19 @@ export default function BioPage() {
   }, []);
 
   return (
-    <div className="flex mt-12 mx-auto max-w-6xl">
-      <div className="w-1/3 pr-8 fade-in-item">
+    <div className="flex flex-col lg:flex-row lg:items-center mt-12 mx-auto max-w-6xl">
+      <div className="mb-8 lg:w-1/3 lg:pr-8 fade-in-item">
         <img
           src={bioData.imageUrl}
           alt={bioData.name}
           className="rounded-full h-auto w-full"
         />
       </div>
-      <div className="w-2/3 fade-in-item">
+      <div className="lg:w-2/3 fade-in-item">
         <h1 className="text-4xl font-mono mb-4">{bioData.name}</h1>
         {bioElements}
       </div>
     </div>
   );
+
 }
